@@ -8,7 +8,7 @@ using namespace std;
 
 struct Node {
 	int data;
-	struct Node* left;
+        struct Node* left;
 	struct Node* right;
 	Node(int val) {
 		data = val;
@@ -19,11 +19,10 @@ struct Node {
 
 Node* insertNode(Node* root, int val) {
 	if (!root) return new Node(val);
-    
+
 	if (!root->left) root->left = new Node(val);
 	else if (!root->right) root->right = new Node(val);
 	else insertNode(root->left, val);
-    
 	return root;
 }
 
